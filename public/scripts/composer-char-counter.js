@@ -1,0 +1,9 @@
+console.log("added new js page");
+$(document).ready(function(){
+  $('.new-tweet form textarea').keyup(function(ev){
+    let cnt = 140 - $(this).val().length;
+    console.log(cnt);
+    $('.new-tweet form .counter').text(cnt);
+
+  })
+})
