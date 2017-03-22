@@ -1,4 +1,3 @@
-console.log("added new js page");
 $(document).ready(function(){
   $('.new-tweet form textarea').keyup(function(ev){
     let cnt = 140 - $(this).val().length;

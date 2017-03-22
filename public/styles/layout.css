@@ -33,7 +33,7 @@ body {
  }
 
 
-#all-tweets .one-tweet {
+#tweets-container .one-tweet {
   border-style: ridge;
   border-radius: 10px;
   background-color: #ffffff;
