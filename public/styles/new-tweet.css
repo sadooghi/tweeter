@@ -9,8 +9,9 @@
 }
 
 .new-tweet textarea {
-  width: 360px;
+  width: 100%;
   padding-left: 10px;
+  margin-top: 20px;
 }
 
 .new-tweet input {
@@ -30,7 +31,7 @@
   padding-right: 10px;
 }
 
-.container{
+.one-tweet .container{
   padding-left: 2em;
   padding-right: 2em;
 }

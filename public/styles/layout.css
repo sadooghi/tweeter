@@ -31,3 +31,95 @@ body {
   margin: auto;
   background-color: white;
  }
+
+
+#all-tweets .one-tweet {
+  border-style: ridge;
+  border-radius: 10px;
+  background-color: #ffffff;
+  margin-top: 20px;
+}
+
+.one-tweet .avatar {
+  float: left;
+  width: 70px;
+  padding-left: 10px;
+}
+
+.one-tweet .tweet-header{
+  background-color: #eeeeee;
+}
+
+.posted-date{
+
+}
+
+.one-tweet {
+  max-width: 450px;
+  min-width: 320px;
+}
+
+.tweet-header {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-items: center;
+}
+
+.tweet-header > .section.left {
+  flex: 1 1 auto;
+}
+
+.tweet-header > .section.middle {
+  flex: 2 2 auto;
+}
+
+.tweet-header > .section.right {
+  flex: 1 1 auto;
+}
+
+.one-tweet .body{
+  height: 200px;
+  display: flex;
+  align-items: center;
+
+}
+
+.one-tweet .tweet-text{
+  padding-left: 10px;
+  margin: 0;
+}
+
+p, h1, h2, h3, h4, h5, h6 {
+  margin: 0;
+}
+
+.one-tweet .fa {
+  color: #00a087;
+  padding-right: 15px;
+  transform: scale(1);
+  transition: transform 300ms ease-in-out;
+}
+
+.one-tweet .fa:hover {
+  transform-origin: center;
+  transform: scale(2);
+}
+
+.tweet-footer {
+  border-top: solid lightgrey;
+  border-width: 1px;
+  height: 20px;
+
+  display: flex;
+  align-items: center;
+}
+
+.tweet-footer > .posted-date {
+  flex: 1 1 auto;
+  font-size: 80%;
+}
+
+
+
+
