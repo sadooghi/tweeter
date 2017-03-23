@@ -79,6 +79,8 @@ function renderTweets(atwt){
 
   });
 
+  $('#nav-bar .right button').css('cursor', 'pointer');
+
 });
 
 
