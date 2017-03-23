@@ -76,6 +76,7 @@ body {
 
 .tweet-header > .section.right {
   flex: 1 1 auto;
+  border-radius: 5px;
 }
 
 .one-tweet .body{
@@ -120,6 +121,38 @@ p, h1, h2, h3, h4, h5, h6 {
   font-size: 80%;
 }
 
+/*.new-tweet .textarea{
+  word-wrap: break-word;
+}
+*/
 
+#nav-bar {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-items: center;
+}
 
+#nav-bar .right button:hover {
+  transform-origin: center;
+  transform: scale(1.2);
+}
 
+#nav-bar .right button {
+  border-radius: 5px;
+  border-width: 2px;
+  width: 100px;
+  height: 50px;
+  border-style: ridge;
+  border-color: black;
+  background-color: white;
+  flex: 0 0 100px;
+}
+
+#nav-bar .left {
+  flex: 1 1 auto;
+}
+
+#nav-bar .middle {
+  flex: 1 1 auto;
+}

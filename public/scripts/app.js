@@ -40,18 +40,26 @@ function renderTweets(atwt){
   $("#tweets-container").append(str);
 }
 
-   $("#send-tweet").on('submit', function(ev){
-     ev.preventDefault();
-     let data = $(this).serialize();
-     $.ajax({
-      method: 'POST',
-      url: `http://localhost:8080/tweets`,
-      data: data,
-      success: function() {
-        loadTweets();
+    $("#send-tweet").on('submit', function(ev){
+      ev.preventDefault();
+      var textarea = $(this).find("textarea");
+
+      if(textarea.val().length > 140) {
+        alert("your tweet should contain less than 140 charactors!");
+      }else if(textarea.val() === "" || textarea.val() === null) {
+        alert("we cant accept an empty tweet!")
+      }else{
+        let data = $(this).serialize();
+        $.ajax({
+          method: 'POST',
+          url: `http://localhost:8080/tweets`,
+          data: data,
+          success: function() {
+            loadTweets();
+          }
+        });
       }
     });
-   });
 
   function loadTweets(){
     $.ajax({
@@ -59,8 +67,18 @@ function renderTweets(atwt){
       url: `http://localhost:8080/tweets`,
       success: renderTweets
 
-    })
+    });
   }
   loadTweets();
 
-})
+  $("#nav-bar .right button").click(function(){
+    $(".new-tweet").slideToggle(function(){
+      $(".textarea-container textarea").focus();
+
+    });
+
+  });
+
+});
+
+
