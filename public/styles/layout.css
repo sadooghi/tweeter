@@ -43,16 +43,14 @@ body {
 .one-tweet .avatar {
   float: left;
   width: 70px;
-  padding-left: 10px;
+  border-radius: 10px
 }
 
 .one-tweet .tweet-header{
   background-color: #eeeeee;
+  padding: 10px;
 }
 
-.posted-date{
-
-}
 
 .one-tweet {
   max-width: 450px;
@@ -89,6 +87,7 @@ body {
 .one-tweet .tweet-text{
   padding-left: 10px;
   margin: 0;
+  font-size: x-large;
 }
 
 p, h1, h2, h3, h4, h5, h6 {
@@ -111,7 +110,7 @@ p, h1, h2, h3, h4, h5, h6 {
   border-top: solid lightgrey;
   border-width: 1px;
   height: 20px;
-
+  padding-left: 10px;
   display: flex;
   align-items: center;
 }
@@ -121,38 +120,3 @@ p, h1, h2, h3, h4, h5, h6 {
   font-size: 80%;
 }
 
-/*.new-tweet .textarea{
-  word-wrap: break-word;
-}
-*/
-
-#nav-bar {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: nowrap;
-  align-items: center;
-}
-
-#nav-bar .right button:hover {
-  transform-origin: center;
-  transform: scale(1.2);
-}
-
-#nav-bar .right button {
-  border-radius: 5px;
-  border-width: 2px;
-  width: 100px;
-  height: 50px;
-  border-style: ridge;
-  border-color: black;
-  background-color: white;
-  flex: 0 0 100px;
-}
-
-#nav-bar .left {
-  flex: 1 1 auto;
-}
-
-#nav-bar .middle {
-  flex: 1 1 auto;
-}
