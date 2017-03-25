@@ -74,7 +74,7 @@ function renderTweets(res){
                                   <p class="posted-date">${createdTime(twt.created_at + timeDiff)}</p>
                                   <i class="fa fa-flag" aria-hidden="true"></i>
                                   <i class="fa fa-retweet" aria-hidden="true"></i>
-                                  <button data-id="2"><i class="fa fa-heart" aria-hidden="true"></i></button>
+                                  <button data-id="${twt._id}"><i class="fa fa-heart" aria-hidden="true"></i></button>
                                 </footer>
                               </article>` + str
                     }
@@ -136,14 +136,24 @@ function renderTweets(res){
   $('#nav-bar .right button').css('cursor', 'pointer');
 
   $("#tweets-container").on("click", ".tweet-footer button", function(){
-    console.log($(this).data("id"))
+
     countLikes($(this));
   });
+
+  let like = 0;
   function countLikes(button){
-    let like = 0;
+
     console.log("id", button.data("id"));
+    $.ajax({
+      method: 'POST',
+      url: `/tweets/likes`,
+      data: {id: button.data("id")},
+      success: loadTweets
 
+    });
 
+    like ++;
+    console.log(like);
     return like;
   }
 

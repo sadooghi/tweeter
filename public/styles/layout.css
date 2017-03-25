@@ -17,6 +17,9 @@ body {
   background-color: white; }
 
 .one-tweet {
+  border-style: ridge;
+  border-radius: 10px;
+  margin: 10px 20px 10px 20px;
   max-width: 450px;
   min-width: 320px; }
   .one-tweet #tweets-container {
