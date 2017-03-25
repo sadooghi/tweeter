@@ -107,7 +107,7 @@ function renderTweets(res){
         let data = $(this).serialize();
         $.ajax({
           method: 'POST',
-          url: `http://localhost:8080/tweets`,
+          url: `https://${window.location.hostname}/tweets`,
           data: data,
           success: function() {
             textarea.val("");
@@ -121,7 +121,7 @@ function renderTweets(res){
   function loadTweets(){
     $.ajax({
       method: 'GET',
-      url: `http://localhost:8080/tweets`,
+      url: `https://${window.location.hostname}/tweets`,
       success: renderTweets,
       error: function( error ) {
         console.error( "load tweets failed: " + error.responseText );
@@ -153,7 +153,7 @@ function renderTweets(res){
     console.log("id", button.data("id"));
     $.ajax({
       method: 'POST',
-      url: `/tweets/likes`,
+      url: `https://${window.location.hostname}/tweets/likes`,
       data: {id: button.data("id")},
       success: loadTweets
 
