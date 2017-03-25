@@ -3,6 +3,10 @@
  * jQuery is already loaded
  * Reminder: Use (and do all your DOM work in) jQuery's document ready function
  */
+const PORT   = process.env.PORT || 8080;
+
+
+
 function createdTime(time){
   let passedTime = Date.now() - time;
   let created_time = "";
@@ -104,7 +108,7 @@ function renderTweets(res){
         let data = $(this).serialize();
         $.ajax({
           method: 'POST',
-          url: `http://localhost:8080/tweets`,
+          url: `http://localhost:${PORT}/tweets`,
           data: data,
           success: function() {
             textarea.val("");
@@ -118,7 +122,7 @@ function renderTweets(res){
   function loadTweets(){
     $.ajax({
       method: 'GET',
-      url: `http://localhost:8080/tweets`,
+      url: `http://localhost:${PORT}/tweets`;,
       success: renderTweets
 
     });
