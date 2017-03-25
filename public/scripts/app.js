@@ -122,7 +122,7 @@ function renderTweets(res){
   function loadTweets(){
     $.ajax({
       method: 'GET',
-      url: `http://localhost:${PORT}/tweets`;,
+      url: `http://localhost:${PORT}/tweets`,
       success: renderTweets,
       error: function( error ) {
         console.error( "load tweets failed: " + error.responseText );
@@ -130,6 +130,7 @@ function renderTweets(res){
 
 
     });
+    console.log('Porty='+PORT);
   }
   loadTweets();
 
