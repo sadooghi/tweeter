@@ -123,7 +123,11 @@ function renderTweets(res){
     $.ajax({
       method: 'GET',
       url: `http://localhost:${PORT}/tweets`;,
-      success: renderTweets
+      success: renderTweets,
+      error: function( error ) {
+        console.error( "load tweets failed: " + error.responseText );
+      }
+
 
     });
   }
