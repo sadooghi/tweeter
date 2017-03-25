@@ -129,7 +129,6 @@ function renderTweets(res){
 
 
     });
-    console.log('Porty='+PORT);
   }
   loadTweets();
 
