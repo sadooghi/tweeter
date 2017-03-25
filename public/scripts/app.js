@@ -74,7 +74,7 @@ function renderTweets(res){
                                   <p class="posted-date">${createdTime(twt.created_at + timeDiff)}</p>
                                   <i class="fa fa-flag" aria-hidden="true"></i>
                                   <i class="fa fa-retweet" aria-hidden="true"></i>
-                                  <i class="fa fa-heart" aria-hidden="true"></i>
+                                  <button data-id="2"><i class="fa fa-heart" aria-hidden="true"></i></button>
                                 </footer>
                               </article>` + str
                     }
@@ -94,6 +94,7 @@ function renderTweets(res){
     $("#send-tweet").on('submit', function(ev){
       ev.preventDefault();
       var textarea = $(this).find("textarea");
+      var counter = $(this).find("span");
 
       if(textarea.val().length > 140) {
         alert("your tweet should contain less than 140 charactors!");
@@ -107,6 +108,7 @@ function renderTweets(res){
           data: data,
           success: function() {
             textarea.val("");
+            counter.html(140);
             loadTweets();
           }
         });
@@ -132,6 +134,18 @@ function renderTweets(res){
   });
 
   $('#nav-bar .right button').css('cursor', 'pointer');
+
+  $("#tweets-container").on("click", ".tweet-footer button", function(){
+    console.log($(this).data("id"))
+    countLikes($(this));
+  });
+  function countLikes(button){
+    let like = 0;
+    console.log("id", button.data("id"));
+
+
+    return like;
+  }
 
 });
 
