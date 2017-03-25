@@ -3,7 +3,7 @@
  * jQuery is already loaded
  * Reminder: Use (and do all your DOM work in) jQuery's document ready function
  */
-const PORT   = process.env.PORT || 8080;
+const PORT   = 8080;
 
 
 
