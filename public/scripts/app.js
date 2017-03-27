@@ -77,7 +77,7 @@ function renderTweets(res){
                                   <p class="posted-date">${createdTime(twt.created_at + timeDiff)}</p>
                                   <i class="fa fa-flag" aria-hidden="true"></i>
                                   <i class="fa fa-retweet" aria-hidden="true"></i>
-                                  <button data-id="${twt._id}"><i class="fa fa-heart" aria-hidden="true"></i></button>
+                                  <a data-id="${twt._id}"><i class="fa fa-heart" aria-hidden="true"></i></a>
                                 </footer>
                               </article>` + str
                     }
@@ -107,7 +107,7 @@ function renderTweets(res){
         let data = $(this).serialize();
         $.ajax({
           method: 'POST',
-          url: `https://${window.location.hostname}/tweets`,
+          url: `${window.location.origin}/tweets`,
           data: data,
           success: function() {
             textarea.val("");
@@ -121,7 +121,7 @@ function renderTweets(res){
   function loadTweets(){
     $.ajax({
       method: 'GET',
-      url: `https://${window.location.hostname}/tweets`,
+      url: `http://${window.location.host}/tweets`,
       success: renderTweets,
       error: function( error ) {
         console.error( "load tweets failed: " + error.responseText );
@@ -153,7 +153,7 @@ function renderTweets(res){
     console.log("id", button.data("id"));
     $.ajax({
       method: 'POST',
-      url: `https://${window.location.hostname}/tweets/likes`,
+      url: `http://${window.location.host}/tweets/likes`,
       data: {id: button.data("id")},
       success: loadTweets
 

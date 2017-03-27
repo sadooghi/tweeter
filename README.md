@@ -35,5 +35,7 @@ Dependencies:
 - It is running in our Vagrant machine (and therefore...)
 - It is Running with Node 5.10.x or above
 
-
+add a .env file which contains :
+-MONGODB_URI=mongodb://localhost:27017/tweeter
+-PORT = 8080
 
