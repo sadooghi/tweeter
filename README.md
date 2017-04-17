@@ -1,41 +1,34 @@
-# Tweeter Project
+# Project Description
+Tweeter is a web app similar to Twitter which is a SPA (single page application) and lets users send their tweets to all other users.
+## Functional Specifications
+*	Single page app architecture.
+*	Uses ajax to communicate with backend server
+*	Tweets are persisted to MongoDB and survive server restart
+### Page Contains:
+*	Navbar
+  *	fixed to top
+  *	contains Compose button, which:
+    *	Toggles display of inline compose box
+    *	Auto-focuses the text area in the compose box
+*	Tweet compose box
+  *	Contains form to submit tweet, above the tweets
+  *	Counts the number of characters and turns red when there is more than 140 characters
+  *	Does not submit a tweet if it is empty or contain more than 140 characters
+  *	Automatically refreshes tweet list when successfully submitted
+*	List of tweets
+  *	Order by post time descending (reverse chronological)
+  *	Each tweet contains:
+    *	user avatar
+    *	user name
+    *	user handle
+    *	tweet text
 
-A simple single-page AJAX-based Twitter clone that uses jQuery, HTML5 and plain ol' CSS3 to help web bootcamp students get comfortable with their front-end chops with those technologies.
+## Stack Specifications
+*	ES6 (Simple, client side JS)
+*	jQuery (Ajax)
+*	CSS3
+*	Semantic HTML5 tags
+*	git for version control
+*	mongodb for persistence
 
-## Technical Approach & Objectives
-
-This project is starter (incomplete) code for students to fork and clone, located here.
-
-The server is built with Node and Express and allows users to request and submit tweets via a JSON end-point. The server/express code should not require any change from the student.
-
-Students must work with and implement the HTML, CSS and client-side JS to bring this project to life.
-
-## Final Product
-
-The end result should look and function like this:
-
-!["End Result"](https://d.pr/i/1eyEY/4MEH16BY+)
-
-## Getting Started
-
-1. Fork and clone your fork of this repository.
-2. Install dependencies: `npm install` or `npm i` for short.
-3. Start the web server from the command line: `npm run local`
-4. Open the app on <http://localhost:8080/> and make sure that it's loading.
-
-## Dependencies & Troubleshooting
-
-Dependencies:
-
-- Express
-- Node 5.10.x or above
-
-**This project assumes that:**
-
-- It is running in our Vagrant machine (and therefore...)
-- It is Running with Node 5.10.x or above
-
-add a .env file which contains :
--MONGODB_URI=mongodb://localhost:27017/tweeter
--PORT = 8080
-
+![picture alt](https://raw.github.com/sadooghi/tweeter/master/images/tweeter_page_on_mobile.png "tweeter_page")
