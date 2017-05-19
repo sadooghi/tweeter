@@ -1,4 +1,4 @@
-## See Tweeter app live here :  https://serene-brushlands-88093.herokuapp.com/ 
+## Check live Tweeter app here :  https://serene-brushlands-88093.herokuapp.com/ 
 # Project Description
 Tweeter is a web app similar to Twitter which is a SPA (single page application) and lets users send their tweets to all other users.
 ## Functional Specifications
